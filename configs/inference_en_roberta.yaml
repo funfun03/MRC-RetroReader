@@ -23,8 +23,9 @@ RetroDataModelArguments:
     use_auth_token: False
     
     # SketchModelArguments
-    sketch_revision: en-roberta-sketch
-    sketch_model_name: faori/retro_reeader
+    sketch_revision: clean-main
+    # sketch_model_name: faori/retro_reeader
+    sketch_model_name: funfun0803/retroreader-sketch
     sketch_architectures: RobertaForSequenceClassification
     
     # IntensiveModelArguments
