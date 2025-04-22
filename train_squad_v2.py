@@ -17,6 +17,11 @@ from retro_reader.constants import EXAMPLE_FEATURES
 import torch
 import glob
 
+# Set the environment variable to disable XLA
+import os
+os.environ['XLA_FLAGS'] = '--xla_gpu_cuda_data_dir=/usr/lib/cuda'
+os.environ['TF_XLA_FLAGS'] = '--tf_xla_disable'
+
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.13.0.dev0")
 require_version("datasets>=1.8.0")
@@ -122,7 +127,7 @@ def main(args):
     )
 
     # 🔁 Resume from latest checkpoint if exists
-    output_dir = retro_reader.training_args.output_dir
+    output_dir = retro_reader.args.output_dir
     checkpoints = sorted(glob.glob(os.path.join(output_dir, "checkpoint-*")), key=os.path.getmtime)
 
     if checkpoints:
