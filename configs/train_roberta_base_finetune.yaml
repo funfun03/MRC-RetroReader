@@ -38,8 +38,8 @@ TrainingArguments:
     learning_rate: 2e-5
     per_device_train_batch_size: 12
     per_device_eval_batch_size: 12
-    # num_train_epochs: 6.0         # Phase 1: 6 epochs
-    num_train_epochs: 10.0         # Phase 2: 10 epochs
+    num_train_epochs: 5.0         # Phase 1: 5 epochs
+    # num_train_epochs: 10.0         # Phase 2: 10 epochs
 
 
     save_strategy: steps
