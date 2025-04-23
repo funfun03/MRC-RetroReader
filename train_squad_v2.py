@@ -117,8 +117,13 @@ def main(args):
     if args.resume_checkpoint:
         retro_reader.model.load_state_dict(torch.load(os.path.join(args.resume_checkpoint, 'pytorch_model.bin')))
 
+    # Train
     print("Training ...")
-    retro_reader.train(module=args.module)
+    retro_reader.train(
+        module=args.module,
+        resume_from_checkpoint=args.resume_checkpoint
+    )
+
     logger.warning("Train retrospective reader Done.")
 
 if __name__ == "__main__":
