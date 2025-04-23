@@ -115,7 +115,14 @@ def main(args):
 
     # Resume from checkpoint by updating model weights from path manually
     if args.resume_checkpoint:
-        retro_reader.model.load_state_dict(torch.load(os.path.join(args.resume_checkpoint, 'pytorch_model.bin')))
+        model_path = os.path.join(args.resume_checkpoint, 'pytorch_model.bin')
+        if args.module == "sketch":
+            retro_reader.sketch.model.load_state_dict(torch.load(model_path))
+        elif args.module == "intensive":
+            retro_reader.intensive.model.load_state_dict(torch.load(model_path))
+        else:
+            raise ValueError("Resuming is only supported for 'sketch' or 'intensive' module.")
+
 
     # Train
     print("Training ...")
