@@ -58,7 +58,10 @@ def data_aug_for_multiple_answers(examples) -> Union[Dict, Any]:
 
     for i, (answers, unanswerable) in enumerate(zip(examples["answers"], examples["is_impossible"])):
         answerable = not unanswerable
-        assert len(answers["text"]) == len(answers["answer_start"]) or answers["answer_start"][0] == -1
+        assert (
+            len(answers["text"]) == len(answers["answer_start"]) or
+            answers["answer_start"][0] == -1
+        )
         if answerable and len(answers["text"]) > 1:
             for n_ans in range(len(answers["text"])):
                 ans = {
@@ -88,6 +91,7 @@ def main(args):
         remove_columns=squad_v2.column_names["train"],
         features=EXAMPLE_FEATURES,
     )
+
     num_unanswerable_train = sum(squad_v2["train"]["is_impossible"])
     num_unanswerable_valid = sum(squad_v2["validation"]["is_impossible"])
     logger.warning(f"Number of unanswerable sample for SQuAD v2.0 train dataset: {num_unanswerable_train}")
@@ -100,6 +104,7 @@ def main(args):
         batch_size=args.batch_size,
         num_proc=5,
     )
+
     squad_v2 = datasets.DatasetDict({
         "train": squad_v2_train,
         "validation": squad_v2["validation"]
@@ -113,24 +118,11 @@ def main(args):
         device="cuda" if torch.cuda.is_available() else "cpu",
     )
 
-    # Resume from checkpoint by updating model weights from path manually
-    if args.resume_checkpoint:
-        model_path = os.path.join(args.resume_checkpoint, 'pytorch_model.bin')
-        if args.module == "sketch":
-            retro_reader.sketch.model.load_state_dict(torch.load(model_path))
-        elif args.module == "intensive":
-            retro_reader.intensive.model.load_state_dict(torch.load(model_path))
-        else:
-            raise ValueError("Resuming is only supported for 'sketch' or 'intensive' module.")
-
-
-    # Train
     print("Training ...")
     retro_reader.train(
         module=args.module,
         resume_from_checkpoint=args.resume_checkpoint
     )
-
     logger.warning("Train retrospective reader Done.")
 
 if __name__ == "__main__":
