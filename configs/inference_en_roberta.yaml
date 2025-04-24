@@ -29,8 +29,9 @@ RetroDataModelArguments:
     sketch_architectures: RobertaForSequenceClassification
     
     # IntensiveModelArguments
-    intensive_revision: en-roberta-intensive
-    intensive_model_name: faori/retro_reeader
+    intensive_revision: main
+    # intensive_model_name: faori/retro_reeader
+    intensive_model_name: funfun0803/RetroReader-intensive
     intensive_architectures: RobertaForQuestionAnsweringAVPool
     
 
