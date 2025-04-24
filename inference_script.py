@@ -7,8 +7,8 @@ dataset = datasets.load_dataset("squad_v2", split="validation")
 
 # Load model
 reader = RetroReader.load(
-    config_file="E:\WORKSPACE\RetroReader\MRC-RetroReader\configs\inference_en_roberta.yaml",
-    device="cpu"
+    config_file="/kaggle/working/MRC-RetroReader/configs/inference_en_roberta.yaml",
+    device="cuda"
 )
 
 # Tạo predictions
