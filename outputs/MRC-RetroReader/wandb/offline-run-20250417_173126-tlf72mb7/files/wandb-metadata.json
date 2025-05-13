@@ -1,0 +1,55 @@
+{
+  "os":  "Linux-6.6.56+-x86_64-with-glibc2.35",
+  "python":  "CPython 3.11.11",
+  "startedAt":  "2025-04-17T17:31:27.374635Z",
+  "args":  [
+    "--configs",
+    "configs/train_roberta_base_finetune.yaml",
+    "--batch_size",
+    "1024",
+    "--module",
+    "sketch"
+  ],
+  "program":  "/kaggle/working/MRC-RetroReader/train_squad_v2.py",
+  "codePath":  "train_squad_v2.py",
+  "git":  {
+    "remote":  "https://github.com/phanhoang1803/MRC-RetroReader.git",
+    "commit":  "09b43eac8fb7e09d27e62e4d4f0814142a5df20c"
+  },
+  "root":  "/kaggle/working/MRC-RetroReader",
+  "host":  "57f9dd93da95",
+  "executable":  "/usr/bin/python3",
+  "codePathLocal":  "train_squad_v2.py",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "gpu":  "Tesla T4",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "8656922775552",
+      "used":  "6747064758272"
+    }
+  },
+  "memory":  {
+    "total":  "33662353408"
+  },
+  "cpu":  {
+    "count":  2,
+    "countLogical":  4
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing"
+    },
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing"
+    }
+  ],
+  "cudaVersion":  "12.6"
+}
