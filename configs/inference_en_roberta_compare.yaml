@@ -18,29 +18,21 @@ RetroDataModelArguments:
   beta2: 1
   best_cof: 1
 
-  # SketchModelArguments - Vanilla RoBERTa (no fine-tuning)
+  # ModelArguments
+  use_auth_token: False
+
+  # SketchModelArguments - RoBERTa base chưa fine-tune
+  sketch_revision: main
   sketch_model_name: roberta-base
   sketch_architectures: RobertaForSequenceClassification
 
-  # IntensiveModelArguments - Vanilla RoBERTa (no fine-tuning)
+  # IntensiveModelArguments - RoBERTa base chưa fine-tune
+  intensive_revision: main
   intensive_model_name: roberta-base
-  intensive_model_mode: freeze # Không fine-tune
   intensive_architectures: RobertaForQuestionAnsweringAVPool
 
 TrainingArguments:
-  run_name: baseline-roberta-vanilla
-
-  output_dir: outputs/baseline_vanilla
-  overwrite_output_dir: True
-
-  learning_rate: 0.0 # No training - evaluation only
-  per_device_train_batch_size: 12
+  output_dir: outputs
+  no_cuda: True
+  per_device_train_batch_size: 1
   per_device_eval_batch_size: 12
-  num_train_epochs: 0.0 # No training epochs
-
-  save_strategy: no
-  evaluation_strategy: epoch
-
-  no_cuda: True # Điều chỉnh theo hardware của bạn
-  logging_dir: outputs/baseline_vanilla/logs
-  logging_steps: 100
