@@ -151,7 +151,7 @@ def main(args):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--configs", "-c", type=str, default="configs/train_distilbert.yaml", help="config file path")
+    parser.add_argument("--configs", "-c", type=str, default="configs/train_roberta_base_finetune.yaml", help="config file path")
     parser.add_argument("--batch_size", "-b", type=int, default=1024, help="batch size")
     parser.add_argument("--resume_checkpoint", "-r", type=str, default=None, help="resume checkpoint path")
     parser.add_argument("--module", "-m", type=str, default="all", choices=["all", "sketch", "intensive"], help="module to train")

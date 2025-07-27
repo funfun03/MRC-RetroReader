@@ -1,0 +1,130 @@
+{
+    "id-01": [
+        {
+            "start_logit": 7.316294193267822,
+            "end_logit": 7.3322625160217285,
+            "text": "wrought iron",
+            "probability": 0.9990917444229126
+        },
+        {
+            "start_logit": 7.316294193267822,
+            "end_logit": -0.24921844899654388,
+            "text": "wrought iron and stands about 300 meters tall.",
+            "probability": 0.0005093426443636417
+        },
+        {
+            "start_logit": -1.2670766115188599,
+            "end_logit": 7.3322625160217285,
+            "text": "iron",
+            "probability": 0.00018702300440054387
+        },
+        {
+            "start_logit": -1.5323739051818848,
+            "end_logit": 7.3322625160217285,
+            "text": "made of wrought iron",
+            "probability": 0.00014344243390951306
+        },
+        {
+            "start_logit": 7.316294193267822,
+            "end_logit": -2.407492160797119,
+            "text": "wrought",
+            "probability": 5.884148777113296e-05
+        },
+        {
+            "start_logit": -5.289546012878418,
+            "end_logit": 7.3322625160217285,
+            "text": "the tower is made of wrought iron",
+            "probability": 3.349333155711065e-06
+        },
+        {
+            "start_logit": -6.002738952636719,
+            "end_logit": 7.3322625160217285,
+            "text": "of wrought iron",
+            "probability": 1.641432277210697e-06
+        },
+        {
+            "start_logit": 7.316294193267822,
+            "end_logit": -6.137856483459473,
+            "text": "wrought iron and stands about 300 meters tall",
+            "probability": 1.4112592907622457e-06
+        },
+        {
+            "start_logit": -6.360874176025391,
+            "end_logit": 7.3322625160217285,
+            "text": "tower is made of wrought iron",
+            "probability": 1.1473259746708209e-06
+        },
+        {
+            "start_logit": -6.652425765991211,
+            "end_logit": 7.3322625160217285,
+            "text": ". Designed by Gustave Eiffel\u2019s engineering company, the tower is made of wrought iron",
+            "probability": 8.571711305194185e-07
+        },
+        {
+            "start_logit": 7.316294193267822,
+            "end_logit": -7.66623067855835,
+            "text": "wrought iron and",
+            "probability": 3.0608535439569096e-07
+        },
+        {
+            "start_logit": -7.811105728149414,
+            "end_logit": 7.3322625160217285,
+            "text": "Gustave Eiffel\u2019s engineering company, the tower is made of wrought iron",
+            "probability": 2.6906627681455575e-07
+        },
+        {
+            "start_logit": -7.832201957702637,
+            "end_logit": 7.3322625160217285,
+            "text": "World's Fair. Designed by Gustave Eiffel\u2019s engineering company, the tower is made of wrought iron",
+            "probability": 2.634491806929873e-07
+        },
+        {
+            "start_logit": -8.245311737060547,
+            "end_logit": 7.3322625160217285,
+            "text": "1889 World's Fair. Designed by Gustave Eiffel\u2019s engineering company, the tower is made of wrought iron",
+            "probability": 1.7429542253921682e-07
+        },
+        {
+            "start_logit": -1.2670766115188599,
+            "end_logit": -0.24921844899654388,
+            "text": "iron and stands about 300 meters tall.",
+            "probability": 9.534529965549154e-08
+        },
+        {
+            "start_logit": -1.5323739051818848,
+            "end_logit": -0.24921844899654388,
+            "text": "made of wrought iron and stands about 300 meters tall.",
+            "probability": 7.312776517665043e-08
+        },
+        {
+            "start_logit": -1.5323739051818848,
+            "end_logit": -2.407492160797119,
+            "text": "made of wrought",
+            "probability": 8.448039601205437e-09
+        },
+        {
+            "start_logit": -5.289546012878418,
+            "end_logit": -0.24921844899654388,
+            "text": "the tower is made of wrought iron and stands about 300 meters tall.",
+            "probability": 1.70751035533101e-09
+        },
+        {
+            "start_logit": -6.002738952636719,
+            "end_logit": -0.24921844899654388,
+            "text": "of wrought iron and stands about 300 meters tall.",
+            "probability": 8.368106763079197e-10
+        },
+        {
+            "start_logit": -6.360874176025391,
+            "end_logit": -0.24921844899654388,
+            "text": "tower is made of wrought iron and stands about 300 meters tall.",
+            "probability": 5.849127293622303e-10
+        },
+        {
+            "start_logit": -4.941962242126465,
+            "end_logit": -5.417181968688965,
+            "text": "",
+            "probability": 1.3768874061736991e-11
+        }
+    ]
+}

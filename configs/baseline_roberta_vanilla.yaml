@@ -1,0 +1,46 @@
+RetroDataModelArguments:
+  # DataArguments
+  max_seq_length: 512
+  max_answer_length: 30
+  doc_stride: 128
+  return_token_type_ids: True
+  pad_to_max_length: True
+  preprocessing_num_workers: 5
+  overwrite_cache: False
+  version_2_with_negative: True
+  null_score_diff_threshold: 0.0
+  rear_threshold: 0.0
+  n_best_size: 20
+  use_choice_logits: False
+  start_n_top: -1
+  end_n_top: -1
+  beta1: 1
+  beta2: 1
+  best_cof: 1
+
+  # SketchModelArguments - Vanilla RoBERTa (no fine-tuning)
+  sketch_model_name: roberta-base
+  sketch_architectures: RobertaForSequenceClassification
+
+  # IntensiveModelArguments - Vanilla RoBERTa (no fine-tuning)
+  intensive_model_name: roberta-base
+  intensive_model_mode: freeze # Không fine-tune
+  intensive_architectures: RobertaForQuestionAnsweringAVPool
+
+TrainingArguments:
+  run_name: baseline-roberta-vanilla
+
+  output_dir: outputs/baseline_vanilla
+  overwrite_output_dir: True
+
+  learning_rate: 0.0 # No training - evaluation only
+  per_device_train_batch_size: 12
+  per_device_eval_batch_size: 12
+  num_train_epochs: 0.0 # No training epochs
+
+  save_strategy: no
+  evaluation_strategy: epoch
+
+  no_cuda: True # Điều chỉnh theo hardware của bạn
+  logging_dir: outputs/baseline_vanilla/logs
+  logging_steps: 100
